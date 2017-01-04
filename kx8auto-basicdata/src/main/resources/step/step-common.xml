@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<steps>	
+	<!-- 点击搜索 -->
+	<step name = "commonSearch">
+		<objectname name = "commonSearchBtn"/>
+	    <actionname name ="click" />
+	</step>
+	<!-- 保存或修改  -->
+	<step name ="commonSave" >
+		<objectname name = "commonSaveOrModify"/>
+	    <actionname name ="click" />
+	</step>
+	<!-- 确认删除 -->
+	<step name ="commonComfirmDel" >
+		<objectname name = "commonComfirmDel"/>
+	    <actionname name ="click" />
+	</step>
+	
+	<!-- 搜索结果 -->
+	<step name ="commonSearchResult" >
+		<objectname name = "commonSearchResult"/>
+	    <actionname name ="checkElementText" />
+	</step>
+	<!-- 等待 -->
+	<step name ="commonSleep">
+	    <actionname name ="sleep" />
+	</step>
+	<!-- 确认修改 -->
+	<step name = "commonModify">
+		<objectname name="commonModifyBtn" />
+		<actionname name ="click"/>
+   </step>
+   	<!-- 确认部门选择 -->
+	<step name = "commonDeptCheck">
+		<objectname name="commonCheckBtn" />
+		<actionname name ="click"/>
+   </step>
+</steps>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<objects>
+	<!-- login -->
+	<object name = "user" xpath = "//*[@id='username']" />
+	<object name = "password" xpath = "//*[@id='password']" />
+	<object name = "submit" xpath = "//*[@id='js-mobile_btn']" />
+	
+	<!-- title -->
+	<object name = "pagetitile" xpath = "//*[@id='navbar-container']/div[1]/a/small" />
+	
+	<!-- logout -->
+	<object name = "userinfo" xpath = "//*[@id='navbar-container']/div[2]/ul/li/a" />
+	<object name = "logout" xpath = "//a[@id='a_nav_logout']" />
+	<object name = "confirm" xpath = "//div[@class='modal-footer']/button[2]" />
+	
+	<!-- common -->
+	<object name = "save" xpath = "//div[@class='modal-footer']/button[1]" />
+	<object name = "search" xpath = "//*[@id='find_btn']" />
+	
+</objects>

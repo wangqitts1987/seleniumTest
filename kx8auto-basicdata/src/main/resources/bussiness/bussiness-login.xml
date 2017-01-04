@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bussinesses>
+	<bussiness name="busi_login">
+		<case name="login" data="login_admin" />
+	</bussiness>
+	<bussiness name="busi_login_schoolMgr">
+		<case name="login" data="login_schoolMgr" />
+	</bussiness>
+</bussinesses>

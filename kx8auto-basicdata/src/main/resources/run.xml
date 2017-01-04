@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<run>
+    <!-- 登陆 -->
+   	<bussiness name="busi_login" />
+
+
+    <!-- 教育局基本信息管理 -->
+   	<bussiness name="busi_education" />
+	<!-- 学校信息管理--> 
+	<bussiness name="busi_school" /> 
+	<bussiness name="delSchool" /> 
+	
+	<!-- <bussiness name="busiDelete_education" /> -->
+	 
+	<!---<bussiness name="busi_school" /> -->
+	<!--- <bussiness name="busi_test" /> -->
+</run>

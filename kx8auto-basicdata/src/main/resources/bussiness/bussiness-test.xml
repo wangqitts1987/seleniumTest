@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bussinesses>
+	<bussiness name="busi_test">
+		<condition value ="false" >
+			<tcase name ="test_t" data="data_test_t"></tcase>
+			<fcase name ="test_f" data="data_test_f"></fcase>
+		</condition>
+		
+		<wloop value ="true" >
+			<case name ="test_t" data="data_test_t"></case>
+			<condition value ="false" >
+				<tcase name ="test_t" data="data_test_t"></tcase>
+				<fcase name ="test_f" data="data_test_f"></fcase>
+			</condition>
+		</wloop>
+	</bussiness>
+	
+</bussinesses>

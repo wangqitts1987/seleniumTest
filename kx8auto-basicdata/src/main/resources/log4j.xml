@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<!-- 控制台输出日志 -->
+	<appender name="CONSOLE.ERR" class="org.apache.log4j.ConsoleAppender">  
+        <param name="target" value="System.err" />  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%n[%p] %d{yyyy-MM-dd HH:mm:ss,SSS} %l %n%m%n" />  
+        </layout>  
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">  
+            <param name="LevelMin" value="warn" />  
+            <param name="LevelMax" value="fatal" />  
+            <param name="AcceptOnMatch" value="false" />  
+        </filter>  
+    </appender>  
+  
+    <appender name="CONSOLE.OUT" class="org.apache.log4j.ConsoleAppender">  
+        <param name="target" value="System.out" />  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%n[%p] %d{yyyy-MM-dd HH:mm:ss,SSS} %l %n%m%n" />
+        </layout>  
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">  
+            <param name="LevelMin" value="debug" />  
+            <param name="LevelMax" value="info" />  
+            <param name="AcceptOnMatch" value="false" />  
+        </filter>  
+    </appender>
+
+	<!-- 输出到日志文件(Debug级别) -->
+	<appender name="log4jDebug" class="org.apache.log4j.DailyMaxRollingFileAppender">
+		<param name="File" value="/dylogs/dayang-auto-light.log" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="240" />
+		<param name="encoding" value="utf-8"></param>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n[%p] %d{yyyy-MM-dd HH:mm:ss,SSS} %l %n%m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+
+	<!-- 输出到日志文件（Warn级别） -->
+	<appender name="log4jError" class="org.apache.log4j.DailyMaxRollingFileAppender">
+		<param name="File" value="/dylogs/dayang-auto-light-error.log" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="240" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n[%p] %d{yyyy-MM-dd HH:mm:ss,SSS} %l %n%m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<!-- log4j sql conf -->
+	<appender name="IBatis" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n[%p] %d{yyyy-MM-dd HH:mm:ss,SSS} %l %n%m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="DEBUG" />
+		</filter>
+	</appender>
+
+	<logger name="com.ibatis" additivity="true">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="com.ibatis.jdbc.SQL" additivity="true">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="com.ibatis.jdbc.ScriptRunner" additivity="true">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate"
+		additivity="true">
+		<level value="DEBUG"></level>
+	</logger>
+	<logger name="org.mybatis.spring.SqlSessionUtils" additivity="true">
+		<level value="ERROR"></level>
+	</logger>
+	<logger name="java.sql.Connection" additivity="true">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="java.sql.ResultSet" additivity="true">
+		<level value="INFO" />
+	</logger>
+	<logger name="java.sql.Statement" additivity="true">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="java.sql.PreparedStatement" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="IBatis" />
+	</logger>
+	<logger name="java.sql.ResultSet" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="IBatis" />
+	</logger>
+
+	<!-- spring -->
+	<logger name="org.springframework.beans.factory" additivity="true">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="org.springframework.beans.factory.support"
+		additivity="true">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework.aop.framework" additivity="true">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework.beans.factory.annotation"
+		additivity="true">
+		<level value="ERROR" />
+	</logger>
+	<logger name="org.springframework.jdbc.datasource" additivity="true">
+		<level value="ERROR" />
+	</logger>
+
+	<!-- apache -->
+	<logger name="org.apache" additivity="true">
+		<level value="ERROR" />
+	</logger>
+	<logger name="freemarker.beans" additivity="true">
+		<level value="ERROR" />
+	</logger>
+	<logger name="net.sf.ehcache" additivity="true">
+		<level value="ERROR" />
+	</logger>
+
+	<!-- ehcache -->
+	<logger name="net.sf.ehcache" additivity="true">
+		<level value="DEBUG" />
+	</logger>
+	<logger name="com.mchange.v2" additivity="true">
+		<level value="ERROR" />
+	</logger>
+
+	<!--根rooter配置 -->
+    <root>  
+        <priority value="info" />  
+        <appender-ref ref="CONSOLE.ERR" />  
+        <appender-ref ref="CONSOLE.OUT" />  
+    </root> 
+</log4j:configuration>
+

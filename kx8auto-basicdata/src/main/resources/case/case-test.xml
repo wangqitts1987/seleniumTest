@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases>
+	<case name = "test_t">
+		<step name = "test_t"/>
+	</case>
+	
+	<case name = "test_f">
+		<step name = "test_f"/>
+	</case>
+</cases>

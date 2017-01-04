@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bussinesses>
+	<bussiness name ="noDataSearch">
+		<case name ="noDataSearch" data="noDataSearch" />
+	</bussiness>
+</bussinesses>

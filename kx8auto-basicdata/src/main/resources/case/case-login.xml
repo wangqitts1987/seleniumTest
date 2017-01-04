@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases>
+	<case name = "login">
+		<step name = "inputUser" />
+    	<step name = "inputPassword" />
+    	<step name = "submit" />
+    	<step name = "checkTitleText" />
+	</case>
+	
+	<case name ="logout">
+		<step name= "clickUserinfo" />
+		<step name= "clickLogout" />
+		<step name= "clickConfirm" />
+	</case>
+	
+</cases>

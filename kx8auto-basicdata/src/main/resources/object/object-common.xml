@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects>
+	<!-- 保存或修改按钮 -->
+	<object name = "commonSaveOrModify" xpath = "//div[@class='modal-footer']/button[1]" />
+	<!-- 搜索按钮 -->
+	<object name = "commonSearchBtn" xpath = "//*[@id='find_btn']" />
+	<!-- 确认删除按钮 -->
+	<object name = "commonComfirmDel" xpath = "//div[@class='modal-footer']/button[2]" />
+	<!-- 搜索结果：验证“无数据显示”-->
+	<object name = "commonSearchResult" xpath = "//table/tbody/tr/td[3]/div" />
+	<!-- 确认修改按钮  -->
+	<object name = "commonModifyBtn" xpath = "//div[@class='modal-dialog animated pluse']/div/div[2]/button[1]" />
+	<!-- 部门：确认选择按钮  -->
+	<object name = "commonCheckBtn" xpath = ".//*[@class='xubox_yes xubox_botton2']" />
+</objects>

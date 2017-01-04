@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configData>
+	<data name="common"/>
+	<data name="login"/>
+	<data name="education"/>
+	
+	<data name="school"/> 
+	
+	<!--- <data name="test"/> -->
+</configData>

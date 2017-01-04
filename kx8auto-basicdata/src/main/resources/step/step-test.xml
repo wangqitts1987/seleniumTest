@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<steps>	
+    <step name = "test_t">
+    	<actionname name ="Test_t" />
+    </step>
+    <step name = "test_f">
+    	<actionname name ="Test_" />
+    </step>
+</steps>

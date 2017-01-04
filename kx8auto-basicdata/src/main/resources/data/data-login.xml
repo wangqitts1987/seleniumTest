@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+	<datum name = "login_admin">
+		<step name = "inputUser" value ="test"/>
+    	<step name = "inputPassword" value = "test"/>
+    	<step name = "checkTitleText" value ="titleName" type ="global" />
+    </datum>
+    
+    <datum name = "login_schoolMgr">
+		<step name = "inputUser" value ="schoolAccount" type ="runtime"/>
+    	<step name = "inputPassword" value = "test"/>
+    	<step name = "checkTitleText" value ="titleName" type ="global" />
+    </datum>
+    
+    <datum name = "login_educationMgr">
+		<step name = "inputUser" value ="educationAccout" type ="runtime"/>
+		<step name = "inputPassword" value = "test"/>
+    	<step name = "checkTitleText" value ="titleName" type ="global" />
+    </datum>
+</data>

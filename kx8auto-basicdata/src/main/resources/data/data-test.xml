@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+	<datum name = "data_test_t">
+		<step name = "test_t" value ="true"/>
+    </datum>
+    <datum name = "data_test_f">
+		<step name = "test_f" value ="false"/>
+    </datum>
+</data>

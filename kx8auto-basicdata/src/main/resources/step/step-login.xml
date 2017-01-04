@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<steps>	
+	<!-- launch -->
+	<step name = "launch">
+	    <actionname name ="launch" />
+	</step>
+	
+	<!-- login -->
+	<step name = "inputUser">
+		<objectname name="user" />
+		<actionname name ="type"/>
+    </step>
+	<step name = "inputPassword">
+	    <objectname name = "password"  />
+		<actionname name = "type" />
+	</step>
+	<step name = "submit">
+	    <objectname name = "submit"  />
+		<actionname name = "click" />
+	</step>
+	<step name = "checkTitleText">
+		<objectname name = "pagetitile"  />
+	    <actionname name ="checkElementText" />
+	</step>
+	
+	<!-- logout -->
+	<step name = "clickUserinfo">
+		<objectname name = "userinfo"  />
+	    <actionname name ="click" />
+	</step>
+	<step name = "clickLogout">
+		<objectname name = "logout"  />
+	    <actionname name ="click" />
+	</step>
+	<step name = "clickConfirm">
+		<objectname name = "confirm"  />
+	    <actionname name ="click" />
+	</step>
+	
+	<!-- common -->
+	<step name = "sleep">
+    	<actionname name ="sleep" />
+    </step>
+    
+    <step name ="checktest">
+    	<objectname name="user" />
+		<actionname name ="checkElementExsit"/>
+    </step>
+    
+</steps>
